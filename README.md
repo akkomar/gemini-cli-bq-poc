@@ -36,7 +36,15 @@ TODO: some tool in conversational analytics extension is broken, disable it if g
 gemini extensions disable bigquery-conversational-analytics
 ```
 
-
+## DataHub MCP server
+To use MCP server, in ~/.gemini/settings.yaml add:
+```yaml
+"mcpServers": {
+    "dataHub": {
+      "httpUrl": "https://mozilla.acryl.io/integrations/ai/mcp/?token={YOUR_API_TOKEN}"
+    }
+  }
+```
 
 ## Interacting with BigQuery in Gemini CLI
 Start CLI with:
