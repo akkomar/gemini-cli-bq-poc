@@ -37,6 +37,8 @@ gemini extensions disable bigquery-conversational-analytics
 ```
 
 ## DataHub MCP server
+_This might fail due to bad schema definition_
+
 To use MCP server, in ~/.gemini/settings.yaml add:
 ```yaml
 "mcpServers": {
