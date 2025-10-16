@@ -24,9 +24,9 @@ gemini extensions install https://github.com/gemini-cli-extensions/bigquery-conv
 Install [MCP Toolbox for Databases](https://googleapis.github.io/genai-toolbox/getting-started/introduction/#why-toolbox):
 ```
 curl -L -o ~/.gemini/extensions/bigquery-data-analytics/toolbox \
-  https://storage.googleapis.com/genai-toolbox/v0.16.0/darwin/arm64/toolbox
+  https://storage.googleapis.com/genai-toolbox/v0.17.0/darwin/arm64/toolbox
 curl -L -o ~/.gemini/extensions/bigquery-conversational-analytics/toolbox \
-  https://storage.googleapis.com/genai-toolbox/v0.16.0/darwin/arm64/toolbox
+  https://storage.googleapis.com/genai-toolbox/v0.17.0/darwin/arm64/toolbox
 chmod +x ~/.gemini/extensions/bigquery-*/toolbox
 ```
 See https://github.com/googleapis/genai-toolbox/releases for latest release.
