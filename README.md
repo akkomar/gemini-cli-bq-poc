@@ -1,18 +1,13 @@
 # Gemini CLI playground
 
-## Install gemini-cli
+## Installation
+### gemini-cli
 See https://github.com/google-gemini/gemini-cli
-
 ```
-export GOOGLE_CLOUD_PROJECT="mozdata-nonprod"
-export GOOGLE_CLOUD_LOCATION="us-west1"
-```
-To start:
-```
-gemini
+brew install gemini-cli
 ```
 
-## Extensions for BigQuery
+### Extensions for BigQuery
 See https://cloud.google.com/bigquery/docs/develop-with-gemini-cli
 
 Install extensions:
@@ -31,13 +26,8 @@ chmod +x ~/.gemini/extensions/bigquery-*/toolbox
 ```
 See https://github.com/googleapis/genai-toolbox/releases for latest release.
 
-TODO: some tool in conversational analytics extension is broken, disable it if gemini fails with `The GenerateContentRequest proto is invalid:\\n * tools[0].function_declarations[15].name: [FIELD_INVALID]`:
-```
-gemini extensions disable bigquery-conversational-analytics
-```
-
-## DataHub MCP server
-_This might fail due to bad schema definition_
+### DataHub MCP server
+_This might fail due to bad schema definition, skip for now_
 
 To use MCP server, in ~/.gemini/settings.yaml add:
 ```yaml
@@ -49,8 +39,18 @@ To use MCP server, in ~/.gemini/settings.yaml add:
 ```
 
 ## Interacting with BigQuery in Gemini CLI
-Start CLI with:
+
+Authenticate with gcloud:
 ```
+gcloud auth login YOUR_EMAIL@mozilla.com --update-adc
+gcloud config set project mozdata-nonprod
+```
+
+Start Gemini CLI:
+```
+GOOGLE_GENAI_USE_VERTEXAI=true
+export GOOGLE_CLOUD_PROJECT="mozdata-nonprod"
+export GOOGLE_CLOUD_LOCATION="us-west1"
 export BIGQUERY_PROJECT="mozdata"
 gemini
 ```
